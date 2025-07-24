@@ -1784,13 +1784,12 @@ p:last-child {
 }
 
 .contact-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 8rem;
+    display: flex;
     max-width: 1600px;
     margin: 0 auto;
-    align-items: stretch;
+    align-items: center;
     min-height: 70vh;
+    gap: 8rem;
 }
 
 .contact-text .section-title {
@@ -1842,14 +1841,16 @@ p:last-child {
     border-color: #F4E4A6;
 }
 
-.contact-info {
-    position: relative;
+.contact-text, .contact-info {
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    position: relative;
+}
+
+.contact-info {
     align-items: flex-start;
-    height: 100%;
-    padding: 2rem 0;
 }
 
 .contact-item {
@@ -2090,6 +2091,522 @@ p:last-child {
     background: url('https://images.unsplash.com/photo-1560472354-2b1f3b5b9de2?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80') center/cover;
     opacity: 0.3;
     z-index: 1;
+}
+
+/* ===== COMPREHENSIVE MOBILE OPTIMIZATIONS ===== */
+
+/* Mobile Navigation */
+@media (max-width: 1024px) {
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100vh;
+        background: rgba(10, 10, 10, 0.98);
+        backdrop-filter: blur(20px);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+        transition: right 0.4s ease;
+        z-index: 999;
+    }
+    
+    .nav-menu.active {
+        right: 0;
+    }
+    
+    .nav-menu .nav-link {
+        font-size: 2rem;
+        color: var(--color-white);
+    }
+    
+    .menu-toggle {
+        display: flex;
+        z-index: 1000;
+    }
+    
+    .navbar {
+        padding: 1.5rem 2rem;
+    }
+    
+    .nav-contact {
+        display: none;
+    }
+}
+
+/* Mobile Hero Section */
+@media (max-width: 768px) {
+    .hero {
+        height: 100vh;
+        padding: 0 2rem;
+        text-align: center;
+    }
+    
+    .hero-title {
+        font-size: clamp(2.5rem, 8vw, 4rem);
+        margin-bottom: 1.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: clamp(1rem, 4vw, 1.2rem);
+        margin-top: 1.5rem;
+    }
+    
+    .scroll-prompt {
+        bottom: 2rem;
+    }
+}
+
+/* Mobile Stats Section */
+@media (max-width: 768px) {
+    .stats-section {
+        padding: 6rem 2rem;
+        background-attachment: scroll;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+        text-align: center;
+    }
+    
+    .stat-number {
+        font-size: clamp(2.5rem, 10vw, 3.5rem);
+        margin-bottom: 1rem;
+    }
+    
+    .stat-label {
+        font-size: 0.9rem;
+    }
+}
+
+/* Mobile About Section */
+@media (max-width: 768px) {
+    .about-section {
+        padding: 6rem 2rem;
+        min-height: auto;
+    }
+    
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+        text-align: center;
+    }
+    
+    .section-title {
+        font-size: clamp(2.5rem, 8vw, 3.5rem);
+        margin-bottom: 2rem;
+    }
+    
+    .about-description {
+        font-size: 1.1rem;
+    }
+    
+    .image-container {
+        aspect-ratio: 4/3;
+        margin: 0 auto;
+        max-width: 400px;
+    }
+}
+
+/* Mobile Services Section */
+@media (max-width: 768px) {
+    .services-section {
+        padding: 6rem 2rem;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .service-item {
+        padding: 4rem 2rem;
+        text-align: center;
+    }
+    
+    .service-number {
+        font-size: 4rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .service-content h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .service-content p {
+        font-size: 0.95rem;
+        margin-bottom: 2rem;
+    }
+    
+    .service-link {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.8rem;
+    }
+}
+
+/* Mobile Featured Property */
+@media (max-width: 768px) {
+    .featured-property {
+        height: 100vh;
+        background-attachment: scroll;
+    }
+    
+    .property-content {
+        padding: 0 2rem;
+        text-align: center;
+    }
+    
+    .property-title {
+        font-size: clamp(2rem, 6vw, 3rem);
+        margin-bottom: 2rem;
+    }
+    
+    .property-price {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+    }
+    
+    .property-details {
+        flex-direction: column;
+        gap: 1rem;
+        margin-bottom: 3rem;
+        font-size: 0.9rem;
+    }
+    
+    .property-cta {
+        padding: 1.2rem 3rem;
+        font-size: 0.85rem;
+    }
+}
+
+/* Mobile Testimonial */
+@media (max-width: 768px) {
+    .testimonial-section {
+        padding: 6rem 2rem;
+    }
+    
+    .testimonial-quote blockquote {
+        font-size: clamp(1.5rem, 5vw, 2rem);
+        margin-bottom: 3rem;
+    }
+    
+    .client-name {
+        font-size: 1rem;
+    }
+    
+    .client-title {
+        font-size: 0.9rem;
+    }
+}
+
+/* Mobile Contact Section */
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 6rem 2rem;
+        min-height: auto;
+    }
+    
+    .contact-content {
+        flex-direction: column;
+        gap: 4rem;
+        text-align: center;
+        min-height: auto;
+    }
+    
+    .contact-text .section-title {
+        font-size: clamp(2.5rem, 8vw, 3.5rem);
+        margin-bottom: 2rem;
+    }
+    
+    .contact-text p {
+        font-size: 1.1rem;
+        margin-bottom: 3rem;
+    }
+    
+    .cta-button {
+        padding: 1.5rem 3rem;
+        font-size: 0.85rem;
+    }
+    
+    .contact-item {
+        margin-bottom: 2.5rem;
+        padding-bottom: 2.5rem;
+        text-align: center;
+    }
+    
+    .contact-item:hover {
+        transform: none;
+    }
+    
+    .contact-label {
+        font-size: 0.75rem;
+        margin-bottom: 1rem;
+    }
+    
+    .contact-value {
+        font-size: 1.2rem;
+    }
+}
+
+/* Mobile Footer */
+@media (max-width: 768px) {
+    .footer {
+        padding: 4rem 2rem 2rem;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        text-align: center;
+    }
+    
+    .footer-logo h3 {
+        font-size: 2rem;
+    }
+    
+    .footer-section h4 {
+        margin-bottom: 1.5rem;
+    }
+    
+    .footer-contact p {
+        justify-content: center;
+    }
+    
+    .footer-social {
+        justify-content: center;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        padding-top: 2rem;
+    }
+    
+    .footer-legal {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+    
+    .footer-trademarks {
+        font-size: 0.75rem;
+    }
+}
+
+/* Mobile Search Page */
+@media (max-width: 768px) {
+    .search-section {
+        padding: 6rem 2rem;
+    }
+    
+    .property-search-form {
+        padding: 3rem 2rem;
+    }
+    
+    .search-input-group {
+        flex-direction: column;
+    }
+    
+    .search-button {
+        padding: 1.5rem 2rem;
+        justify-content: center;
+    }
+    
+    .filter-row {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .properties-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .results-header {
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+    }
+}
+
+/* Mobile Valuation Page */
+@media (max-width: 768px) {
+    .form-section {
+        padding: 6rem 2rem;
+    }
+    
+    .form-container {
+        padding: 3rem 2rem;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .process-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .process-step {
+        padding: 3rem 2rem;
+    }
+    
+    .step-number {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* Mobile Contact Page */
+@media (max-width: 768px) {
+    .contact-info-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .contact-card {
+        padding: 3rem 2rem;
+    }
+    
+    .team-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .map-overlay {
+        position: relative;
+        width: 100%;
+        padding: 3rem 2rem;
+    }
+    
+    .map-placeholder {
+        height: 300px;
+    }
+}
+
+/* Mobile Reports Page */
+@media (max-width: 768px) {
+    .market-overview {
+        padding: 6rem 2rem;
+    }
+    
+    .overview-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        text-align: center;
+    }
+    
+    .market-stats {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .reports-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .report-card {
+        margin: 0 auto;
+        max-width: 400px;
+    }
+    
+    .insights-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+}
+
+/* Mobile Page Headers */
+@media (max-width: 768px) {
+    .page-header {
+        min-height: 50vh;
+        padding: 0 2rem;
+    }
+    
+    .page-header .parallax-image {
+        padding: 2rem;
+        max-width: none;
+    }
+    
+    .page-title {
+        font-size: clamp(2.5rem, 8vw, 3.5rem);
+        margin-bottom: 1rem;
+    }
+    
+    .page-subtitle {
+        font-size: 1rem;
+    }
+}
+
+/* Mobile Typography */
+@media (max-width: 768px) {
+    h1 {
+        font-size: clamp(2rem, 8vw, 3rem);
+    }
+    
+    h2 {
+        font-size: clamp(1.8rem, 6vw, 2.5rem);
+    }
+    
+    h3 {
+        font-size: clamp(1.5rem, 5vw, 2rem);
+    }
+    
+    p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+}
+
+/* Mobile Buttons */
+@media (max-width: 768px) {
+    .search-button, .cta-button, .property-cta {
+        padding: 1.2rem 2.5rem;
+        font-size: 0.85rem;
+    }
+    
+    .btn {
+        padding: 1rem 2rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Mobile Forms */
+@media (max-width: 768px) {
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 1.2rem 1.5rem;
+        font-size: 1rem;
+    }
+    
+    .submit-btn {
+        padding: 1.2rem 2.5rem;
+        font-size: 0.9rem;
+        width: 100%;
+    }
+}
+
+/* Mobile Images */
+@media (max-width: 768px) {
+    .parallax-image img {
+        object-fit: cover;
+        height: 100%;
+    }
+    
+    .property-image {
+        aspect-ratio: 16/10;
+    }
+    
+    .member-image {
+        height: 250px;
+    }
 }
 
 /* These styles are now handled by the new page-title and page-subtitle above */
