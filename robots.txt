@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://highpointhomes.ca/sitemap.xml
+
+# Disallow sensitive areas (if any in future)
+# Disallow: /admin/
+# Disallow: /api/
+
+# Allow search engines to crawl all public content
+Allow: /css/
+Allow: /js/
+Allow: /images/
+
+# Crawl delay (optional - for high-traffic sites)
+# Crawl-delay: 1 

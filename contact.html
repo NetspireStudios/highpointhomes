@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Highpoint Homes Realty</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div id="cursor" class="cursor">
+        <div class="cursor-dot"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">HIGHPOINT</a>
+            </div>
+            
+            <ul id="nav-menu" class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="search.html" class="nav-link">Search</a></li>
+                <li><a href="valuation.html" class="nav-link">Valuation</a></li>
+                <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                <li><a href="reports.html" class="nav-link">Reports</a></li>
+            </ul>
+            
+            <div class="nav-contact">
+                <span>(416) 697-1234</span>
+            </div>
+            
+            <div id="menu-toggle" class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="parallax-image">
+            <h1 class="page-title animate-fade-up">Contact <span class="accent">Us</span></h1>
+            <p class="page-subtitle animate-fade-up">Ready to start your real estate journey? Let's connect and make it happen.</p>
+        </div>
+    </section>
+
+    <!-- Contact Information Section -->
+    <section class="contact-info-section">
+        <div class="container">
+            <div class="contact-info-grid">
+                <div class="contact-card animate-fade-left">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>Call Us</h3>
+                    <p>(416) 697-1234</p>
+                    <span class="contact-time">Mon - Fri: 9AM - 7PM<br>Sat - Sun: 10AM - 5PM</span>
+                </div>
+
+                <div class="contact-card animate-fade-up">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email Us</h3>
+                    <p>info@highpointhomes.ca</p>
+                    <span class="contact-time">We respond within 2 hours</span>
+                </div>
+
+                <div class="contact-card animate-fade-right">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Visit Us</h3>
+                    <p>123 Bay Street<br>Toronto, Ontario M5J 2T3</p>
+                    <span class="contact-time">By appointment only</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="form-section">
+        <div class="form-container animate-scale-in">
+            <div class="form-header">
+                <h2 class="section-title">Get In <span class="accent">Touch</span></h2>
+                <p>Whether you're buying, selling, or just exploring your options, we're here to help guide you through every step.</p>
+            </div>
+
+            <form class="contact-form" id="contactForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="first-name">First Name</label>
+                        <input type="text" id="first-name" name="first-name" placeholder="Enter your first name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="last-name">Last Name</label>
+                        <input type="text" id="last-name" name="last-name" placeholder="Enter your last name" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="inquiry-type">How can we help you?</label>
+                    <select id="inquiry-type" name="inquiry-type" required>
+                        <option value="">Select an option</option>
+                        <option value="buying">I'm looking to buy</option>
+                        <option value="selling">I'm looking to sell</option>
+                        <option value="renting">I'm looking to rent</option>
+                        <option value="valuation">I need a property valuation</option>
+                        <option value="investment">Investment opportunities</option>
+                        <option value="consultation">General consultation</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="budget">Budget Range</label>
+                        <select id="budget" name="budget">
+                            <option value="">Select budget range</option>
+                            <option value="under-500k">Under $500K</option>
+                            <option value="500k-750k">$500K - $750K</option>
+                            <option value="750k-1m">$750K - $1M</option>
+                            <option value="1m-2m">$1M - $2M</option>
+                            <option value="2m-5m">$2M - $5M</option>
+                            <option value="over-5m">Over $5M</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="timeline">Timeline</label>
+                        <select id="timeline" name="timeline">
+                            <option value="">Select timeline</option>
+                            <option value="immediately">Immediately</option>
+                            <option value="1-3-months">1-3 months</option>
+                            <option value="3-6-months">3-6 months</option>
+                            <option value="6-12-months">6-12 months</option>
+                            <option value="over-year">Over 1 year</option>
+                            <option value="exploring">Just exploring</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="preferred-areas">Preferred Areas/Neighborhoods</label>
+                    <input type="text" id="preferred-areas" name="preferred-areas" placeholder="e.g., Yorkville, Forest Hill, Rosedale">
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Tell us more about what you're looking for</label>
+                    <textarea id="message" name="message" placeholder="Share your specific needs, preferences, or any questions you have..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="contact-preference">Preferred Contact Method</label>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="contact-preference" value="email" checked>
+                            <span class="radio-custom"></span>
+                            Email
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="contact-preference" value="phone">
+                            <span class="radio-custom"></span>
+                            Phone Call
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="contact-preference" value="text">
+                            <span class="radio-custom"></span>
+                            Text Message
+                        </label>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    <i class="fas fa-paper-plane"></i>
+                    Send Message
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section">
+        <div class="container">
+            <div class="team-header">
+                <h2 class="section-title animate-fade-up">Meet Our <span class="accent">Team</span></h2>
+                <p class="animate-fade-up">Dedicated professionals with decades of combined experience in luxury real estate.</p>
+            </div>
+
+            <div class="team-grid">
+                <div class="team-member animate-fade-left">
+                    <div class="member-image parallax-image">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Michael Rodriguez">
+                    </div>
+                    <div class="member-info">
+                        <h3>Michael Rodriguez</h3>
+                        <span class="member-title">Founding Partner & Senior Agent</span>
+                        <p>15+ years specializing in luxury properties and high-end market analysis.</p>
+                        <div class="member-contact">
+                            <a href="mailto:michael@highpointhomes.ca"><i class="fas fa-envelope"></i></a>
+                            <a href="tel:555-123-4567"><i class="fas fa-phone"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-member animate-fade-up">
+                    <div class="member-image parallax-image">
+                        <img src="https://images.unsplash.com/photo-1494790108755-2616b567b4b0?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Sarah Chen">
+                    </div>
+                    <div class="member-info">
+                        <h3>Sarah Chen</h3>
+                        <span class="member-title">Senior Sales Associate</span>
+                        <p>Expert in luxury condominiums and investment properties with 12+ years experience.</p>
+                        <div class="member-contact">
+                            <a href="mailto:sarah@highpointhomes.ca"><i class="fas fa-envelope"></i></a>
+                            <a href="tel:555-123-4568"><i class="fas fa-phone"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-member animate-fade-right">
+                    <div class="member-image parallax-image">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="David Thompson">
+                    </div>
+                    <div class="member-info">
+                        <h3>David Thompson</h3>
+                        <span class="member-title">Market Analysis Specialist</span>
+                        <p>Financial expert with deep knowledge of market trends and property valuations.</p>
+                        <div class="member-contact">
+                            <a href="mailto:david@highpointhomes.ca"><i class="fas fa-envelope"></i></a>
+                            <a href="tel:555-123-4569"><i class="fas fa-phone"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="map-container">
+            <div class="map-overlay">
+                <div class="map-info animate-fade-up">
+                    <h3>Visit Our Office</h3>
+                    <p>Located in the heart of Toronto's financial district, our office is easily accessible and designed to provide a premium consultation experience.</p>
+                    <div class="office-details">
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>123 Bay Street, Toronto, Ontario M5J 2T3</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-parking"></i>
+                            <span>Complimentary valet parking available</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-wheelchair"></i>
+                            <span>Fully accessible facilities</span>
+                        </div>
+                    </div>
+                    <button class="directions-btn">
+                        <i class="fas fa-directions"></i>
+                        Get Directions
+                    </button>
+                </div>
+            </div>
+            <div class="map-placeholder">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3048.4187!2d-118.4!3d34.067!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2bc04d6d147ab%3A0x1d6c7d4f8b1c8c8c!2sBeverly%20Hills%2C%20CA%2090210!5e0!3m2!1sen!2sus!4v1234567890123" width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3 class="footer-logo">HIGHPOINT</h3>
+                <p class="footer-tagline">Premium Real Estate</p>
+            </div>
+            
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Properties</h4>
+                    <a href="#">Buy</a>
+                    <a href="#">Sell</a>
+                    <a href="#">Rent</a>
+                    <a href="#">Luxury</a>
+                    <a href="#">Commercial</a>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Services</h4>
+                    <a href="#">Property Valuation</a>
+                    <a href="#">Market Analysis</a>
+                    <a href="#">Investment Advice</a>
+                    <a href="#">Property Management</a>
+                    <a href="#">Consulting</a>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <a href="#">About Us</a>
+                    <a href="#">Our Team</a>
+                    <a href="#">Careers</a>
+                    <a href="#">Contact</a>
+                    <a href="#">News</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="footer-legal">
+                <span>&copy; 2024 Highpoint Homes Realty. All rights reserved.</span>
+                <span>Privacy Policy | Terms of Service</span>
+            </div>
+            
+            <div class="footer-trademarks">
+                <p>All trademarks, logos and brand names are the property of their respective owners.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- GSAP Library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
+<!-- Lenis Smooth Scroll -->
+<script src="https://unpkg.com/@studio-freight/lenis@1.0.29/dist/lenis.min.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="js/main.js"></script>
+
+    <style>
+    .contact-info-section {
+        padding: 8rem 4rem;
+        background: #fafafa;
+    }
+
+    .contact-info-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 4rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .contact-card {
+        background: #fff;
+        padding: 4rem 3rem;
+        border-radius: 16px;
+        text-align: center;
+        box-shadow: 0 20px 50px rgba(10, 10, 10, 0.08);
+        transition: all 0.4s ease;
+        border-top: 4px solid #DAA520;
+    }
+
+    .contact-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 30px 80px rgba(10, 10, 10, 0.12);
+    }
+
+    .contact-icon {
+        width: 80px;
+        height: 80px;
+        background: linear-gradient(135deg, #DAA520, #F4E4A6);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 2rem;
+        font-size: 2rem;
+        color: #fff;
+    }
+
+    .contact-card h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        color: #0a0a0a;
+    }
+
+    .contact-card p {
+        font-size: 1.2rem;
+        font-weight: 500;
+        color: #333;
+        margin-bottom: 1rem;
+    }
+
+    .contact-time {
+        font-size: 0.9rem;
+        color: #666;
+        font-weight: 300;
+    }
+
+    .radio-group {
+        display: flex;
+        gap: 2rem;
+        margin-top: 1rem;
+    }
+
+    .radio-label {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+        cursor: pointer;
+        font-weight: 300;
+        transition: color 0.3s ease;
+    }
+
+    .radio-label:hover {
+        color: #DAA520;
+    }
+
+    .radio-custom {
+        width: 20px;
+        height: 20px;
+        border: 2px solid rgba(10, 10, 10, 0.3);
+        border-radius: 50%;
+        position: relative;
+        transition: all 0.3s ease;
+    }
+
+    .radio-label input[type="radio"] {
+        display: none;
+    }
+
+    .radio-label input[type="radio"]:checked + .radio-custom {
+        border-color: #DAA520;
+    }
+
+    .radio-label input[type="radio"]:checked + .radio-custom::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 10px;
+        height: 10px;
+        background: #DAA520;
+        border-radius: 50%;
+    }
+
+    .team-section {
+        padding: 10rem 4rem;
+        background: #fefefe;
+    }
+
+    .team-header {
+        text-align: center;
+        margin-bottom: 8rem;
+    }
+
+    .team-header p {
+        font-size: 1.2rem;
+        color: #666;
+        font-weight: 300;
+        max-width: 600px;
+        margin: 2rem auto 0;
+    }
+
+    .team-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 4rem;
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+
+    .team-member {
+        background: #fff;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 20px 50px rgba(10, 10, 10, 0.08);
+        transition: all 0.4s ease;
+    }
+
+    .team-member:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 30px 80px rgba(10, 10, 10, 0.15);
+    }
+
+    .member-image {
+        height: 300px;
+        overflow: hidden;
+    }
+
+    .member-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.6s ease;
+    }
+
+    .team-member:hover .member-image img {
+        transform: scale(1.05);
+    }
+
+    .member-info {
+        padding: 3rem;
+        text-align: center;
+    }
+
+    .member-info h3 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+        color: #0a0a0a;
+    }
+
+    .member-title {
+        color: #DAA520;
+        font-size: 0.9rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        margin-bottom: 1.5rem;
+        display: block;
+    }
+
+    .member-info p {
+        color: #666;
+        line-height: 1.6;
+        margin-bottom: 2rem;
+        font-weight: 300;
+    }
+
+    .member-contact {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .member-contact a {
+        width: 40px;
+        height: 40px;
+        background: #f8f8f8;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #666;
+        transition: all 0.3s ease;
+        text-decoration: none;
+    }
+
+    .member-contact a:hover {
+        background: #DAA520;
+        color: #fff;
+        transform: translateY(-2px);
+    }
+
+    .map-section {
+        position: relative;
+        height: 600px;
+        overflow: hidden;
+    }
+
+    .map-container {
+        position: relative;
+        height: 100%;
+    }
+
+    .map-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 40%;
+        height: 100%;
+        background: linear-gradient(135deg, rgba(10, 10, 10, 0.95), rgba(26, 26, 26, 0.95));
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        padding: 4rem;
+    }
+
+    .map-info {
+        color: #fff;
+    }
+
+    .map-info h3 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        color: #fff;
+    }
+
+    .map-info > p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        margin-bottom: 3rem;
+        color: rgba(255, 255, 255, 0.8);
+        font-weight: 300;
+    }
+
+    .office-details {
+        margin-bottom: 3rem;
+    }
+
+    .detail-item {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+        font-weight: 300;
+    }
+
+    .detail-item i {
+        color: #DAA520;
+        width: 20px;
+    }
+
+    .directions-btn {
+        background: linear-gradient(135deg, #DAA520, #F4E4A6);
+        border: none;
+        color: #0a0a0a;
+        padding: 1.2rem 2.5rem;
+        border-radius: 8px;
+        font-size: 1rem;
+        font-weight: 500;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+    }
+
+    .directions-btn:hover {
+        background: linear-gradient(135deg, #F4E4A6, #DAA520);
+        transform: translateY(-2px);
+    }
+
+    .map-placeholder {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .map-placeholder iframe {
+        filter: grayscale(100%) contrast(120%) brightness(90%);
+        transition: filter 0.3s ease;
+    }
+
+    .map-placeholder:hover iframe {
+        filter: grayscale(0%) contrast(100%) brightness(100%);
+    }
+
+    @media (max-width: 1024px) {
+        .contact-info-grid {
+            grid-template-columns: 1fr;
+            gap: 3rem;
+        }
+
+        .team-grid {
+            grid-template-columns: 1fr;
+            gap: 3rem;
+        }
+
+        .map-overlay {
+            width: 100%;
+            position: relative;
+            background: linear-gradient(135deg, #0a0a0a, #1a1a1a);
+        }
+
+        .radio-group {
+            flex-direction: column;
+            gap: 1rem;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .contact-info-section,
+        .team-section {
+            padding: 6rem 2rem;
+        }
+
+        .map-overlay {
+            padding: 2rem;
+        }
+    }
+    </style>
+</body>
+</html> 

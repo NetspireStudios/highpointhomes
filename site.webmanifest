@@ -1,0 +1,101 @@
+{
+    "name": "Highpoint Homes Realty Brokerage",
+    "short_name": "Highpoint Homes",
+    "description": "Toronto's premier luxury real estate brokerage, specializing in exceptional properties and unparalleled service.",
+    "start_url": "/",
+    "display": "standalone",
+    "orientation": "portrait-primary",
+    "theme_color": "#DAA520",
+    "background_color": "#fefefe",
+    "categories": ["business", "real estate", "luxury", "property"],
+    "lang": "en-CA",
+    "scope": "/",
+    "icons": [
+        {
+            "src": "/favicon-16x16.png",
+            "sizes": "16x16",
+            "type": "image/png"
+        },
+        {
+            "src": "/favicon-32x32.png",
+            "sizes": "32x32",
+            "type": "image/png"
+        },
+        {
+            "src": "/apple-touch-icon.png",
+            "sizes": "180x180",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ],
+    "shortcuts": [
+        {
+            "name": "Search Properties",
+            "short_name": "Search",
+            "description": "Find your dream property in Toronto",
+            "url": "/search.html",
+            "icons": [
+                {
+                    "src": "/icons/search-96x96.png",
+                    "sizes": "96x96"
+                }
+            ]
+        },
+        {
+            "name": "Property Valuation",
+            "short_name": "Valuation", 
+            "description": "Get a free property valuation",
+            "url": "/valuation.html",
+            "icons": [
+                {
+                    "src": "/icons/valuation-96x96.png",
+                    "sizes": "96x96"
+                }
+            ]
+        },
+        {
+            "name": "Contact Us",
+            "short_name": "Contact",
+            "description": "Contact our expert real estate team",
+            "url": "/contact.html",
+            "icons": [
+                {
+                    "src": "/icons/contact-96x96.png",
+                    "sizes": "96x96"
+                }
+            ]
+        }
+    ],
+    "screenshots": [
+        {
+            "src": "/screenshots/desktop-1.png",
+            "sizes": "1280x720",
+            "type": "image/png",
+            "form_factor": "wide"
+        },
+        {
+            "src": "/screenshots/mobile-1.png",
+            "sizes": "640x1136",
+            "type": "image/png",
+            "form_factor": "narrow"
+        }
+    ],
+    "related_applications": [],
+    "prefer_related_applications": false,
+    "display_override": ["window-controls-overlay", "standalone", "minimal-ui", "browser"],
+    "edge_side_panel": {
+        "preferred_width": 400
+    }
+} 

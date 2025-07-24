@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Valuation - Highpoint Homes Realty</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div id="cursor" class="cursor">
+        <div class="cursor-dot"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">HIGHPOINT</a>
+            </div>
+            
+            <ul id="nav-menu" class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="search.html" class="nav-link">Search</a></li>
+                <li><a href="valuation.html" class="nav-link active">Valuation</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="reports.html" class="nav-link">Reports</a></li>
+            </ul>
+            
+            <div class="nav-contact">
+                <span>(416) 697-1234</span>
+            </div>
+            
+            <div id="menu-toggle" class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="parallax-image">
+            <h1 class="page-title animate-fade-up">Property <span class="accent">Valuation</span></h1>
+            <p class="page-subtitle animate-fade-up">Get an accurate estimate of your property's current market value</p>
+        </div>
+    </section>
+
+    <!-- Valuation Form Section -->
+    <section class="form-section">
+        <div class="form-container animate-scale-in">
+            <div class="form-header">
+                <h2 class="section-title">Free Property <span class="accent">Assessment</span></h2>
+                <p>Our expert team will provide you with a comprehensive market analysis and valuation report within 24 hours.</p>
+            </div>
+
+            <form class="valuation-form" id="valuationForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="property-address">Property Address</label>
+                        <input type="text" id="property-address" name="property-address" placeholder="Enter your property address" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="property-type">Property Type</label>
+                        <select id="property-type" name="property-type" required>
+                            <option value="">Select Property Type</option>
+                            <option value="single-family">Single Family Home</option>
+                            <option value="condo">Condominium</option>
+                            <option value="townhouse">Townhouse</option>
+                            <option value="duplex">Duplex</option>
+                            <option value="commercial">Commercial</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="bedrooms">Bedrooms</label>
+                        <select id="bedrooms" name="bedrooms" required>
+                            <option value="">Select Bedrooms</option>
+                            <option value="1">1 Bedroom</option>
+                            <option value="2">2 Bedrooms</option>
+                            <option value="3">3 Bedrooms</option>
+                            <option value="4">4 Bedrooms</option>
+                            <option value="5">5+ Bedrooms</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="bathrooms">Bathrooms</label>
+                        <select id="bathrooms" name="bathrooms" required>
+                            <option value="">Select Bathrooms</option>
+                            <option value="1">1 Bathroom</option>
+                            <option value="1.5">1.5 Bathrooms</option>
+                            <option value="2">2 Bathrooms</option>
+                            <option value="2.5">2.5 Bathrooms</option>
+                            <option value="3">3+ Bathrooms</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="square-footage">Square Footage</label>
+                        <input type="number" id="square-footage" name="square-footage" placeholder="e.g., 2500" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="year-built">Year Built</label>
+                        <input type="number" id="year-built" name="year-built" placeholder="e.g., 1995" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="condition">Property Condition</label>
+                    <select id="condition" name="condition" required>
+                        <option value="">Select Condition</option>
+                        <option value="excellent">Excellent - Move-in ready</option>
+                        <option value="good">Good - Minor updates needed</option>
+                        <option value="fair">Fair - Some renovations needed</option>
+                        <option value="poor">Poor - Major renovations needed</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="improvements">Recent Improvements</label>
+                    <textarea id="improvements" name="improvements" placeholder="Describe any recent renovations, upgrades, or improvements (kitchen remodel, new roof, etc.)"></textarea>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="owner-name">Your Name</label>
+                        <input type="text" id="owner-name" name="owner-name" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="owner-email">Email Address</label>
+                        <input type="email" id="owner-email" name="owner-email" placeholder="Enter your email" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="owner-phone">Phone Number</label>
+                    <input type="tel" id="owner-phone" name="owner-phone" placeholder="Enter your phone number" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="timeline">When are you looking to sell?</label>
+                    <select id="timeline" name="timeline">
+                        <option value="">Select Timeline</option>
+                        <option value="immediately">Immediately</option>
+                        <option value="3-months">Within 3 months</option>
+                        <option value="6-months">Within 6 months</option>
+                        <option value="1-year">Within 1 year</option>
+                        <option value="exploring">Just exploring options</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    <i class="fas fa-calculator"></i>
+                    Get My Free Valuation
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Valuation Process Section -->
+    <section class="process-section">
+        <div class="container">
+            <div class="process-header">
+                <h2 class="section-title animate-fade-up">Our Valuation <span class="accent">Process</span></h2>
+                <p class="animate-fade-up">We use cutting-edge technology and local market expertise to provide the most accurate valuations.</p>
+            </div>
+
+            <div class="process-grid">
+                <div class="process-step animate-fade-left">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h3>Property Analysis</h3>
+                        <p>We analyze your property's unique features, condition, and recent improvements to understand its full potential.</p>
+                    </div>
+                </div>
+
+                <div class="process-step animate-fade-up">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h3>Market Research</h3>
+                        <p>Our team examines recent sales of comparable properties in your neighborhood and current market trends.</p>
+                    </div>
+                </div>
+
+                <div class="process-step animate-fade-right">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h3>Expert Review</h3>
+                        <p>Licensed appraisers and market specialists review all data to ensure accuracy and market relevance.</p>
+                    </div>
+                </div>
+
+                <div class="process-step animate-fade-left">
+                    <div class="step-number">04</div>
+                    <div class="step-content">
+                        <h3>Detailed Report</h3>
+                        <p>You receive a comprehensive valuation report with market analysis, pricing recommendations, and next steps.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits-section">
+        <div class="container">
+            <div class="benefits-content">
+                <div class="benefits-text animate-fade-left">
+                    <h2 class="section-title">Why Choose Our <span class="accent">Valuation Service</span></h2>
+                    <div class="benefit-list">
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="benefit-text">
+                                <h3>Market Expertise</h3>
+                                <p>25+ years of local market knowledge and expertise in luxury property valuations.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="benefit-text">
+                                <h3>Fast Turnaround</h3>
+                                <p>Receive your detailed valuation report within 24 hours of submission.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="benefit-text">
+                                <h3>Accurate & Reliable</h3>
+                                <p>95% accuracy rate with comprehensive market analysis and comparable sales data.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-handshake"></i>
+                            </div>
+                            <div class="benefit-text">
+                                <h3>No Obligation</h3>
+                                <p>Free consultation with no pressure to sell. We're here to provide information.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="benefits-image animate-fade-right parallax-image">
+                    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Property Valuation">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3 class="footer-logo">HIGHPOINT</h3>
+                <p class="footer-tagline">Premium Real Estate</p>
+            </div>
+            
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Properties</h4>
+                    <a href="#">Buy</a>
+                    <a href="#">Sell</a>
+                    <a href="#">Rent</a>
+                    <a href="#">Luxury</a>
+                    <a href="#">Commercial</a>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Services</h4>
+                    <a href="#">Property Valuation</a>
+                    <a href="#">Market Analysis</a>
+                    <a href="#">Investment Advice</a>
+                    <a href="#">Property Management</a>
+                    <a href="#">Consulting</a>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <a href="#">About Us</a>
+                    <a href="#">Our Team</a>
+                    <a href="#">Careers</a>
+                    <a href="#">Contact</a>
+                    <a href="#">News</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="footer-legal">
+                <span>&copy; 2024 Highpoint Homes Realty. All rights reserved.</span>
+                <span>Privacy Policy | Terms of Service</span>
+            </div>
+            
+            <div class="footer-trademarks">
+                <p>All trademarks, logos and brand names are the property of their respective owners.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- GSAP Library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
+<!-- Lenis Smooth Scroll -->
+<script src="https://unpkg.com/@studio-freight/lenis@1.0.29/dist/lenis.min.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="js/main.js"></script>
+
+    <style>
+    .form-header {
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+
+    .form-header .section-title {
+        font-size: clamp(2.5rem, 6vw, 4rem);
+        margin-bottom: 1.5rem;
+    }
+
+    .form-header p {
+        font-size: 1.1rem;
+        color: #666;
+        font-weight: 300;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .valuation-form {
+        max-width: none;
+    }
+
+    .form-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    .process-section {
+        padding: 10rem 4rem;
+        background: #fafafa;
+    }
+
+    .process-header {
+        text-align: center;
+        margin-bottom: 8rem;
+    }
+
+    .process-header p {
+        font-size: 1.2rem;
+        color: #666;
+        font-weight: 300;
+        max-width: 600px;
+        margin: 2rem auto 0;
+    }
+
+    .process-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 4rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .process-step {
+        background: #fff;
+        padding: 4rem;
+        border-radius: 16px;
+        box-shadow: 0 20px 50px rgba(10, 10, 10, 0.08);
+        transition: all 0.4s ease;
+        border-left: 4px solid #DAA520;
+    }
+
+    .process-step:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 30px 80px rgba(10, 10, 10, 0.12);
+    }
+
+    .step-number {
+        font-family: 'Playfair Display', serif;
+        font-size: 3rem;
+        font-weight: 300;
+        color: #DAA520;
+        margin-bottom: 2rem;
+    }
+
+    .step-content h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        color: #0a0a0a;
+    }
+
+    .step-content p {
+        color: #666;
+        line-height: 1.6;
+        font-weight: 300;
+    }
+
+    .benefits-section {
+        padding: 10rem 4rem;
+        background: #fefefe;
+    }
+
+    .benefits-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8rem;
+        max-width: 1600px;
+        margin: 0 auto;
+        align-items: center;
+    }
+
+    .benefit-list {
+        margin-top: 3rem;
+    }
+
+    .benefit-item {
+        display: flex;
+        gap: 2rem;
+        margin-bottom: 3rem;
+        padding: 2rem;
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(10, 10, 10, 0.05);
+        transition: all 0.3s ease;
+    }
+
+    .benefit-item:hover {
+        transform: translateX(10px);
+        box-shadow: 0 15px 40px rgba(10, 10, 10, 0.1);
+    }
+
+    .benefit-icon {
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(135deg, #DAA520, #F4E4A6);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 1.5rem;
+        flex-shrink: 0;
+    }
+
+    .benefit-text h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.8rem;
+        color: #0a0a0a;
+    }
+
+    .benefit-text p {
+        color: #666;
+        line-height: 1.6;
+        font-weight: 300;
+    }
+
+    .benefits-image {
+        position: relative;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 30px 80px rgba(10, 10, 10, 0.15);
+    }
+
+    .benefits-image img {
+        width: 100%;
+        height: 600px;
+        object-fit: cover;
+    }
+
+    @media (max-width: 1024px) {
+        .form-row {
+            grid-template-columns: 1fr;
+            gap: 0;
+        }
+
+        .process-grid {
+            grid-template-columns: 1fr;
+            gap: 3rem;
+        }
+
+        .benefits-content {
+            grid-template-columns: 1fr;
+            gap: 4rem;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .process-section,
+        .benefits-section {
+            padding: 6rem 2rem;
+        }
+    }
+    </style>
+</body>
+</html> 

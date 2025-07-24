@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Search - Highpoint Homes Realty</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div id="cursor" class="cursor">
+        <div class="cursor-dot"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">HIGHPOINT</a>
+            </div>
+            
+            <ul id="nav-menu" class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="search.html" class="nav-link active">Search</a></li>
+                <li><a href="valuation.html" class="nav-link">Valuation</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="reports.html" class="nav-link">Reports</a></li>
+            </ul>
+            
+            <div class="nav-contact">
+                <span>(416) 697-1234</span>
+            </div>
+            
+            <div id="menu-toggle" class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title slide-in-right" data-delay="0.1">
+                <span class="line">Find Your</span>
+                <span class="line hero-accent">Perfect Home</span>
+            </h1>
+            <p class="hero-subtitle slide-in-right" data-delay="0.3">Discover luxury properties in prime locations</p>
+        </div>
+    </section>
+
+    <!-- Search Section -->
+    <section class="search-section">
+        <div class="search-content">
+            <div class="search-header">
+                <h2 class="section-title slide-in-right" data-delay="0.1">Property <span class="accent">Search</span></h2>
+                <p class="slide-in-right" data-delay="0.2">Find your dream home with our advanced search filters</p>
+            </div>
+
+            <form class="property-search-form slide-in-right" data-delay="0.3">
+                <div class="search-main">
+                    <div class="search-input-group">
+                        <input type="text" placeholder="Enter city, neighborhood, or property type" required>
+                        <button type="submit" class="search-button">
+                            <i class="fas fa-search"></i>
+                            Search Properties
+                        </button>
+                    </div>
+                </div>
+
+                <div class="search-filters">
+                    <div class="filter-row">
+                        <div class="filter-group">
+                            <label for="property-type">Property Type</label>
+                            <select id="property-type" name="property-type">
+                                <option value="">All Types</option>
+                                <option value="house">House</option>
+                                <option value="condo">Condo</option>
+                                <option value="townhouse">Townhouse</option>
+                                <option value="apartment">Apartment</option>
+                            </select>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <label for="price-range">Price Range</label>
+                            <select id="price-range" name="price-range">
+                                <option value="">Any Price</option>
+                                <option value="0-500000">Under $500K</option>
+                                <option value="500000-750000">$500K - $750K</option>
+                                <option value="750000-1000000">$750K - $1M</option>
+                                <option value="1000000+">$1M+</option>
+                            </select>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <label for="bedrooms">Bedrooms</label>
+                            <select id="bedrooms" name="bedrooms">
+                                <option value="">Any</option>
+                                <option value="1">1+</option>
+                                <option value="2">2+</option>
+                                <option value="3">3+</option>
+                                <option value="4">4+</option>
+                                <option value="5">5+</option>
+                            </select>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <label for="bathrooms">Bathrooms</label>
+                            <select id="bathrooms" name="bathrooms">
+                                <option value="">Any</option>
+                                <option value="1">1+</option>
+                                <option value="2">2+</option>
+                                <option value="3">3+</option>
+                                <option value="4">4+</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="results-section">
+        <div class="results-header slide-in-right" data-delay="0.1">
+            <div class="results-count">
+                <span class="count-number">24</span>Properties Found
+            </div>
+            <div class="view-options">
+                <button class="view-btn active">
+                    <i class="fas fa-th"></i>
+                </button>
+                <button class="view-btn">
+                    <i class="fas fa-list"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="properties-grid">
+            <div class="property-card slide-in-right" data-delay="0.1">
+                <div class="property-image">
+                    <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Modern Luxury Villa">
+                    <div class="property-badge">Featured</div>
+                    <div class="property-actions">
+                        <button class="action-btn" title="Add to Favorites">
+                            <i class="far fa-heart"></i>
+                        </button>
+                        <button class="action-btn" title="Share">
+                            <i class="fas fa-share"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="property-content">
+                    <div class="property-price">$1,250,000</div>
+                    <h3 class="property-title">Modern Luxury Villa</h3>
+                    <p class="property-address">123 Oak Street, Yorkville, Toronto ON M4W 3M5</p>
+                    <div class="property-details">
+                        <span><i class="fas fa-bed"></i> 4 Beds</span>
+                        <span><i class="fas fa-bath"></i> 3 Baths</span>
+                        <span><i class="fas fa-ruler-combined"></i> 3,200 sqft</span>
+                    </div>
+                    <div class="property-footer">
+                        <span class="listing-date">Listed 2 days ago</span>
+                        <button class="contact-agent-btn">Contact Agent</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="property-card slide-in-right" data-delay="0.2">
+                <div class="property-image">
+                    <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Contemporary Townhouse">
+                    <div class="property-badge">New</div>
+                    <div class="property-actions">
+                        <button class="action-btn" title="Add to Favorites">
+                            <i class="far fa-heart"></i>
+                        </button>
+                        <button class="action-btn" title="Share">
+                            <i class="fas fa-share"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="property-content">
+                    <div class="property-price">$850,000</div>
+                    <h3 class="property-title">Contemporary Townhouse</h3>
+                    <p class="property-address">456 Pine Avenue, West Hollywood, CA 90069</p>
+                    <div class="property-details">
+                        <span><i class="fas fa-bed"></i> 3 Beds</span>
+                        <span><i class="fas fa-bath"></i> 2.5 Baths</span>
+                        <span><i class="fas fa-ruler-combined"></i> 2,100 sqft</span>
+                    </div>
+                    <div class="property-footer">
+                        <span class="listing-date">Listed 1 week ago</span>
+                        <button class="contact-agent-btn">Contact Agent</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="property-card slide-in-right" data-delay="0.3">
+                <div class="property-image">
+                    <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Luxury Penthouse">
+                    <div class="property-badge">Luxury</div>
+                    <div class="property-actions">
+                        <button class="action-btn" title="Add to Favorites">
+                            <i class="far fa-heart"></i>
+                        </button>
+                        <button class="action-btn" title="Share">
+                            <i class="fas fa-share"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="property-content">
+                    <div class="property-price">$2,150,000</div>
+                    <h3 class="property-title">Luxury Penthouse</h3>
+                    <p class="property-address">789 Sunset Boulevard, Hollywood, CA 90028</p>
+                    <div class="property-details">
+                        <span><i class="fas fa-bed"></i> 3 Beds</span>
+                        <span><i class="fas fa-bath"></i> 3 Baths</span>
+                        <span><i class="fas fa-ruler-combined"></i> 2,800 sqft</span>
+                    </div>
+                    <div class="property-footer">
+                        <span class="listing-date">Listed 3 days ago</span>
+                        <button class="contact-agent-btn">Contact Agent</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="property-card slide-in-right" data-delay="0.1">
+                <div class="property-image">
+                    <img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Family Home">
+                    <div class="property-actions">
+                        <button class="action-btn" title="Add to Favorites">
+                            <i class="far fa-heart"></i>
+                        </button>
+                        <button class="action-btn" title="Share">
+                            <i class="fas fa-share"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="property-content">
+                    <div class="property-price">$675,000</div>
+                    <h3 class="property-title">Charming Family Home</h3>
+                    <p class="property-address">321 Maple Drive, Santa Monica, CA 90405</p>
+                    <div class="property-details">
+                        <span><i class="fas fa-bed"></i> 4 Beds</span>
+                        <span><i class="fas fa-bath"></i> 2 Baths</span>
+                        <span><i class="fas fa-ruler-combined"></i> 1,950 sqft</span>
+                    </div>
+                    <div class="property-footer">
+                        <span class="listing-date">Listed 5 days ago</span>
+                        <button class="contact-agent-btn">Contact Agent</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="property-card slide-in-right" data-delay="0.2">
+                <div class="property-image">
+                    <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Modern Condo">
+                    <div class="property-badge">Hot</div>
+                    <div class="property-actions">
+                        <button class="action-btn" title="Add to Favorites">
+                            <i class="far fa-heart"></i>
+                        </button>
+                        <button class="action-btn" title="Share">
+                            <i class="fas fa-share"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="property-content">
+                    <div class="property-price">$425,000</div>
+                    <h3 class="property-title">Modern Downtown Condo</h3>
+                    <p class="property-address">555 Spring Street, Downtown LA, CA 90013</p>
+                    <div class="property-details">
+                        <span><i class="fas fa-bed"></i> 2 Beds</span>
+                        <span><i class="fas fa-bath"></i> 2 Baths</span>
+                        <span><i class="fas fa-ruler-combined"></i> 1,100 sqft</span>
+                    </div>
+                    <div class="property-footer">
+                        <span class="listing-date">Listed 1 day ago</span>
+                        <button class="contact-agent-btn">Contact Agent</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="property-card slide-in-right" data-delay="0.3">
+                <div class="property-image">
+                    <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Luxury Estate">
+                    <div class="property-badge">Exclusive</div>
+                    <div class="property-actions">
+                        <button class="action-btn" title="Add to Favorites">
+                            <i class="far fa-heart"></i>
+                        </button>
+                        <button class="action-btn" title="Share">
+                            <i class="fas fa-share"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="property-content">
+                    <div class="property-price">$3,750,000</div>
+                    <h3 class="property-title">Luxury Estate</h3>
+                    <p class="property-address">888 King Street, Forest Hill, Toronto ON M5R 1K8</p>
+                    <div class="property-details">
+                        <span><i class="fas fa-bed"></i> 6 Beds</span>
+                        <span><i class="fas fa-bath"></i> 5 Baths</span>
+                        <span><i class="fas fa-ruler-combined"></i> 5,500 sqft</span>
+                    </div>
+                    <div class="property-footer">
+                        <span class="listing-date">Listed 2 weeks ago</span>
+                        <button class="contact-agent-btn">Contact Agent</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="load-more-section slide-in-right" data-delay="0.4">
+            <button class="load-more">Load More Properties</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3 class="footer-logo">HIGHPOINT</h3>
+                <p class="footer-tagline">Premium Real Estate</p>
+            </div>
+            
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Properties</h4>
+                    <a href="#">Buy</a>
+                    <a href="#">Sell</a>
+                    <a href="#">Rent</a>
+                    <a href="#">Luxury</a>
+                    <a href="#">Commercial</a>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Services</h4>
+                    <a href="#">Property Valuation</a>
+                    <a href="#">Market Analysis</a>
+                    <a href="#">Investment Advice</a>
+                    <a href="#">Property Management</a>
+                    <a href="#">Consulting</a>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <a href="#">About Us</a>
+                    <a href="#">Our Team</a>
+                    <a href="#">Careers</a>
+                    <a href="#">Contact</a>
+                    <a href="#">News</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="footer-legal">
+                <span>&copy; 2024 Highpoint Homes Realty. All rights reserved.</span>
+                <span>Privacy Policy | Terms of Service</span>
+            </div>
+            
+            <div class="footer-trademarks">
+                <p>All trademarks, logos and brand names are the property of their respective owners.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- GSAP Library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
+<!-- Lenis Smooth Scroll -->
+<script src="https://unpkg.com/@studio-freight/lenis@1.0.29/dist/lenis.min.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html> 
